@@ -26,7 +26,7 @@ setup(
         "Programming Language :: Python :: 3.9",
     ],
     python_requires='~=3.5',
-    install_requires=[],
+    install_requires=['pymalleablec2'],
     entry_points={
         'console_scripts': [
             'mc2pf = mc2pf.cli:run'

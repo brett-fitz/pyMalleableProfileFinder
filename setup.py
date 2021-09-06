@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from mc2pf import __author__, __version__, __license__
+from mpf import __author__, __version__, __license__
 
 try:
     with open("README.md", encoding="utf8") as readme_file:
@@ -10,7 +10,7 @@ except TypeError:
         readme = readme_file.read()
 
 setup(
-    name="Malleable-C2-Profile-Finder",
+    name="pyMalleableProfileFinder",
     author=__author__,
     version=__version__,
     description="Attempts to find a corresponding Malleable C2 Profile for a given beacon config",
@@ -29,7 +29,7 @@ setup(
     install_requires=['pymalleablec2'],
     entry_points={
         'console_scripts': [
-            'mc2pf = mc2pf.cli:run'
+            'mpf = mpf.cli:run'
         ]
     }
 )

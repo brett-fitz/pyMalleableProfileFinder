@@ -4,10 +4,10 @@ import asyncio
 import os
 from json import loads, JSONDecodeError
 from typing import Union, Dict
-from mc2pf.compare import Compare
+from mpf.compare import Compare
 
 # logger
-logger = logging.getLogger('mc2pf')
+logger = logging.getLogger('mpf')
 
 # repo location
 repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,7 +44,7 @@ def run():
     cli entry point
     """
     parser = argparse.ArgumentParser(
-        description='mc2pf: Malleable C2 Profile Finder'
+        description='mpf: Cobalt Strike Malleable Profile Finder'
     )
     parser.add_argument(
         "file",
@@ -75,7 +75,7 @@ def run():
 
     logger.info(f'getting available malleable profiles')
     malleable_profiles = []
-    for root, dirs, files in os.walk(f'{repo}/mc2pf/malleable_c2_profiles/Malleable-C2-Profiles/'):
+    for root, dirs, files in os.walk(f'{repo}/mpf/malleable_c2_profiles/Malleable-C2-Profiles/'):
         for file in files:
             if file.endswith('.profile') and file != 'template.profile':
                 logger.info(f'loaded malleable profile {root}/{file}')

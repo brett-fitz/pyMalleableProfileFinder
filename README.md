@@ -1,4 +1,4 @@
-# Malleable-C2-Profile-Finder
+# pyMalleableProfileFinder
 Finds the corresponding Malleable C2 Profile of a given beacon config
 
 
